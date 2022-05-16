@@ -16,9 +16,6 @@ while True:
 
 
 #5. dict_keys 객체와 dict_values 객체, dict_items 객체 리스트 변환, 출력
-dict_keys = list(Dic.keys())
-dict_values = list(Dic.values())
-dict_items = list(Dic.items())
-print(dict_keys)
-print(dict_values)
-print(dict_items)
+print("dict_keys 객체 리스트로 변환 : ", list(Dic.keys()))
+print("dict_values 객체 리스트로 변환 : ", list(Dic.values()))
+print("dict_items 객체 리스트로 변환 : ", list(Dic.items()))

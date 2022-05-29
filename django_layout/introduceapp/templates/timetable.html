@@ -1,0 +1,138 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<head>
+    {% block css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/timetable.css' %}">
+    <title>201711022 정재완 시간표</title>
+    {% endblock %}
+</head>
+
+{% block content %}
+    <header>
+        <h1>시간표 - 201711022 정재완</h1>
+    </header>
+    <table border="1">
+        <thead>
+            <th class="timewidth"></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">9시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">10시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">11시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">12시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">1시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="3", class="mobile"> 모바일 프로그래밍<br>이승진<br>13:30~14:45<br>6202</td>
+                <td rowspan="3", class="algorithm">알고리즘<br>노은하<br>13:30~14:45<br>6202</td>
+                <td rowspan="3", class="mobile"> 모바일 프로그래밍<br>이승진<br>13:30~14:45<br>6202</td>
+                <td rowspan="3", class="algorithm">알고리즘<br>노은하<br>13:30~14:45<br>6202</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">2시</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">3시</td>
+                <td rowspan="3", class="fantasy">환타지와 문학<br>박미정<br>15:00~16:15<br>7207</td>
+                <td rowspan="3", class="vocabulary">영어다의어1<br>권용현<br>15:00~16:15<br>7204</td>
+                <td rowspan="3", class="fantasy">환타지와 문학<br>박미정<br>15:00~16:15<br>7207</td>
+                <td rowspan="3", class="vocabulary">영어다의어1<br>권용현<br>15:00~16:15<br>7204</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">4시</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="3", class="english"> 영국문화와 사회<br>박미정<br>16:30~17:45<br>7204</td>
+                <td rowspan="3", class="teaching">영어교수법및 학습법<br>김성찬<br>16:30~17:45<br>7204</td>
+                <td rowspan="3", class="english"> 영국문화와 사회<br>박미정<br>16:30~17:45<br>7204</td>
+                <td rowspan="3", class="teaching">영어교수법및 학습법<br>김성찬<br>16:30~17:45<br>7204</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">5시</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

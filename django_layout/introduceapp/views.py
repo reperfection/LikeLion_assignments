@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 # Create your views here.
+def main(request):
+    return render(request, 'main.html')
+
 def department(request):
     return render(request, 'department.html')
 
@@ -9,9 +12,6 @@ def grid(request):
 
 def html_css(request):
     return render(request, 'html_css.html')
-
-def main(request):
-    return render(request, 'main.html')
 
 def timetable(request):
     return render(request, 'timetable.html')

@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import introduceapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', introduceapp.views.main, name="main"),
+    path('department/', introduceapp.views.department, name="department"),
+    path('grid/', introduceapp.views.grid, name="grid"),
+    path('html_css/', introduceapp.views.html_css, name="html_css"),
+    path('timetable/', introduceapp.views.timetable, name="timetable"),
 ]

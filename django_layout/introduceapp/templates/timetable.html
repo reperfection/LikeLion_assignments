@@ -1,12 +1,11 @@
-{% extends 'main.html' %}
+{% extends 'layout.html' %}
 {% load static %}
 
-<head>
-    {% block css%}
+{% block css%}
     <link rel="stylesheet" type="text/css" href="{% static 'css/timetable.css' %}">
     <title>201711022 정재완 시간표</title>
-    {% endblock %}
-</head>
+{% endblock %}
+
 
 {% block content %}
     <header>

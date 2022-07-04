@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'SLEIGothicTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'SLEIGothicTTF';
+    background-image: url(https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+    background-size: cover;
+}
+article{
+    padding: 50px;
+    margin: 20px;
+}
+/*
+nav{
+    padding: 50px;
+    margin: 20px;
+}
+*/
+table{
+    padding: 50px auto;
+    margin: 20px auto;
+}
+h1{
+    font-size: 45px;
+    color : #90EE90;
+}
+
+h2{
+    font-size: 35px;
+    color: skyblue;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+blockquote, footer{
+    font-size: 20px;
+    text-align: center;
+}

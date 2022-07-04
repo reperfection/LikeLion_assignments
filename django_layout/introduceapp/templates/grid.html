@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block css%}
+    <link rel="stylesheet" href = "{% static 'css/grid.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="grid-container">
+        <div class="photo_one">아기<img src="{% static 'image\photo1.jpg' %}"></div>
+        <div class="photo_two">아기가 크다가<img src="{% static 'image\photo2.jpg' %}"></div>
+        <div class="photo_three">갑자기 고등학생<img src="{% static 'image\photo3.jpg' %}"></div>
+        <div class="photo_four">졸업 즈음<img src="{% static 'image\photo4.jpg' %}"></div>
+        <div class="photo_five">꽐라<img src="{% static 'image\photo5.jpg' %}"></div>
+        <div class="photo_six">전역<img src="{% static 'image\photo6.jpg' %}"></div>
+        <div class="photo_seven">코로나 전 여행<img src="{% static 'image\photo7.jpg' %}"></div>
+        <div class="photo_eight">생일<img src="{% static 'image\photo8.jpg' %}"></div>
+        <div class="photo_nine">작년 여행<img src="{% static 'image\photo9.jpg' %}"></div>
+    </div>
+{% endblock %}

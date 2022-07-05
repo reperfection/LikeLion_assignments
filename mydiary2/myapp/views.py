@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import DiaryForm
+from .forms import BlogForm
 from django.utils import timezone
 
 # Create your views here.
@@ -8,7 +8,7 @@ def index(request):
 
 def create(request):
     if request.method == 'POST':
-        form = DiaryForm(request.POST)
+        form = BlogForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
             form.pub_date = timezone.now()
@@ -16,5 +16,5 @@ def create(request):
             return redirect('index')
         
         else:
-            form = DiaryForm
+            form = BlogForm
             return render(request, 'create.html', {'form':form})

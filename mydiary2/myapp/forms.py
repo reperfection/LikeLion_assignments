@@ -1,7 +1,7 @@
 from django import forms
-from .models import Diary
+from .models import Blog
 
-class DiaryForm(forms.ModelForm):
+class BlogForm(forms.ModelForm):
     class Meta:
-        model = Diary
+        model = Blog
         fields = ['title', 'body']

@@ -8,10 +8,10 @@
             <div class="col-lg-8">
                 <p class="text-white-50">
                     <h2>Read</h2><br><br>
-                    {% for diarys in diarys.all %}
-                    <h3>제목 : <a href="{% url 'detail' diarys.id %}">{{diarys.title}}</a></h3>
-                    <p>작성일 : {{diarys.pub_date}}</p>
-                    <p>내용 : {{diarys.content}}</p>
+                    {% for posts in posts.all %}
+                    <h3>제목 : <a href="{% url 'detail' posts.id %}">{{posts.title}}</a></h3>
+                    <p>작성일 : {{posts.pub_date}}</p>
+                    <p>내용 : {{posts.content}}</p>
                     {% endfor %}    
                 </p>
             </div>

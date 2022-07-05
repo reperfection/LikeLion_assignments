@@ -1,15 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import DiaryForm
+from .forms import PostForm
 from django.utils import timezone
-from .models import Diary
+from .models import Post
 
 # Create your views here.
 def main(request):
     return render(request, 'main.html')
 
-def create(request):
+def write(request):
     if request.method == 'POST':
-        form = DiaryForm(request.POST)
+        form = PostForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
             form.pub_date = timezone.now()
@@ -17,13 +17,13 @@ def create(request):
             return redirect('main')
         
     else:
-        form = DiaryForm
-        return render(request, 'create.html', {'form':form})
+        form = PostForm
+        return render(request, 'write.html', {'form':form})
     
 def read(request):
-    diarys = Diary.objects
-    return render(request, 'read.html', {'diarys': diarys})
+    posts = Post.objects
+    return render(request, 'read.html', {'posts': posts})
 
 def detail(request, id):
-    diary = get_object_or_404(Diary, id=id)
-    return render(request, 'detail.html', {'diary':diary})
+    post = get_object_or_404(Post, id=id)
+    return render(request, 'detail.html', {'post':post})

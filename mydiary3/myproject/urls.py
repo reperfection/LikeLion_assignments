@@ -19,7 +19,7 @@ import myapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', myapp.views.index, name='index'),
+    path('', myapp.views.main, name='main'),
     path('create/', myapp.views.create, name='create'),
     path('read/', myapp.views.read, name='read'),
     path('detail/<str:id>/', myapp.views.detail, name='detail'),

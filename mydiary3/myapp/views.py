@@ -4,8 +4,8 @@ from django.utils import timezone
 from .models import Diary
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+def main(request):
+    return render(request, 'main.html')
 
 def create(request):
     if request.method == 'POST':
@@ -14,7 +14,7 @@ def create(request):
             form = form.save(commit=False)
             form.pub_date = timezone.now()
             form.save()
-            return redirect('index')
+            return redirect('main')
         
     else:
         form = DiaryForm

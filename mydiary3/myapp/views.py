@@ -9,7 +9,7 @@ def main(request):
 
 def write(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
             form.pub_date = timezone.now()
@@ -27,3 +27,21 @@ def read(request):
 def detail(request, id):
     post = get_object_or_404(Post, id=id)
     return render(request, 'detail.html', {'post':post})
+
+def edit(request, id):
+    post = get_object_or_404(Post, id=id)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.save()
+            return redirect('read')
+        
+    else:
+        form = PostForm(instance=post)
+        return render(request, 'edit.html', {'form':form})
+
+def delete(request, id):
+    post = get_object_or_404(Post, id=id)
+    post.delete()
+    return redirect('read')

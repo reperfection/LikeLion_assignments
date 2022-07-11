@@ -12,6 +12,9 @@
                     <h3>제목 : <a href="{% url 'detail' posts.id %}">{{posts.title}}</a></h3>
                     <p>작성일 : {{posts.pub_date}}</p>
                     <p>내용 : {{posts.content}}</p>
+                    {% if posts.image %}
+                        <img src="{{ posts.image.url }}" width = "600" height = "400" alt="image">
+                    {% endif %}
                     {% endfor %}    
                 </p>
             </div>

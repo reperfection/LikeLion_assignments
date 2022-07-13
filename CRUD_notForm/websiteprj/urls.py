@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import websiteapp.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', websiteapp.views.main, name='main'),
+    path('write/', websiteapp.views.write, name='write'),
+    path('write/create/', websiteapp.views.create, name='create'),
+    path('read/', websiteapp.views.read, name='read'),
+    path('detail/<str:id>', websiteapp.views.detail, name='detail'),
+    path('edit/<str:id>', websiteapp.views.edit, name='edit'),
+    path('update/<str:id>', websiteapp.views.update, name='update'),
+    path('delete/<str:id>', websiteapp.views.delete, name='delete'),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

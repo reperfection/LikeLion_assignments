@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<h1>Read</h1>
+<hr>
+    {% for blogs in blogs.all %}
+        <a href="{% url 'detail' blogs.id %}">
+            <h3>{{ blogs.title}}</h3>
+        </a>
+        <i><p>{{ blogs.pub_date }}</p></i>
+        <b><p>{{ blogs.writer}}</p></b>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<h1>Detail</h1>
+<hr>
+    <h3>{{ blog.title }}</h3>
+    <i><p>{{ blog.pub_date }}</p></i>
+    <b><p>{{ blog.writer }}</p></b>
+    <b><p>{{ blog.feeling }}</p></b>
+    <p>{{ blog.body }}</p>
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" width="500" height="300" alt="image">
+    {% endif %}
+    <br>
+    <a href="{% url 'edit' blog.id %}">수정하기</a>
+    <a href="{% url 'delete' blog.id %}">삭제하기</a>
+{% endblock %}

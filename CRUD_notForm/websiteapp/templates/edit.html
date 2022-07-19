@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<h1>Edit</h1>
+<hr>
+<form method="POST" action="{% url 'update' edit_blog.id %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        제목 : <input type="text" name="title" value="{{edit_blog.title}}">
+    </div>
+    <div>
+        작성자 : <input type="text" name="writer" value="{{edit_blog.writer}}">
+    </div>
+    <div>
+        기분 : <input type="text" name="feeling" value="{{edit_blog.feeling}}">
+    </div>
+    <div>
+        본문 : <textarea name="body" cols="40" rows="10">{{edit_blog.body}}</textarea>
+    </div>
+    <div>
+        업로드 : <input name="image" type="file">
+    </div>
+    <button type="submit">수정</button>
+</form>
+{% endblock %}

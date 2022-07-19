@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<h1>Write</h1>
+<hr>
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        제목 : <input type="text" name="title">
+    </div>
+    <div>
+        작성자 : <input type="text" name="writer">
+    </div>
+    <div>
+        기분 : <input type="text" name="feeling">
+    </div>
+    <div>
+        본문 : <textarea name="body" cols="40" rows="10"></textarea>
+    </div>
+    <div>
+        업로드 : <input name="image" type="file">
+    </div>
+    <button type="submit">작성</button>
+</form>
+{% endblock %}

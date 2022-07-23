@@ -17,6 +17,20 @@
                     <br>
                     <a href="{% url 'edit' post.id %}">수정하기</a>
                     <a href="{% url 'delete' post.id %}">삭제하기</a>
+                    <br>
+                    <br>
+                    {% for comment in post.comments.all %}
+                        <p>{{ comment.text }}</p>
+                    {% endfor %}
+                    <br>
+                    {% for hashtag in post.hashtags.all %}
+                        <span> {{ hashtag.name }} </span>
+                    {% endfor %}
+                    <form method="POST" action="{% url 'detail' post.id %}">
+                        {% csrf_token %}
+                        <p> {{ form.as_p }}</p>
+                        <input type="submit" value="submit">
+                    </form>
                 </p>
             </div>
         </div>

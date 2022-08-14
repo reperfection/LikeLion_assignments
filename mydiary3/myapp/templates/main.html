@@ -31,11 +31,11 @@
                         {% if user.is_authenticated %}
                             <li class="nav-item"><a class="nav-link">{{ user.username }}님 환영합니다</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">로그아웃</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'write' %}">Write</a></li>
                         {% else %}
                             <li class="nav-item"><a class="nav-link" href="{%url 'login' %}">로그인</a></li>
                             <li class="nav-item"><a class="nav-link" href="{%url 'signup' %}">회원가입</a></li>
                         {% endif %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'write' %}">Write</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'read' %}">Read</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'hashtag' %}">Hashtag</a></li>
                     </ul>
